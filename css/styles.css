@@ -44,8 +44,8 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   direction: ltr;
 }
-.logo-img { height: 26px; width: auto; display: block; }
-footer .logo-img { height: 20px; }
+.logo-img { height: 19px; width: auto; display: block; }
+footer .logo-img { height: 16px; }
 .navlinks {
   display: flex;
   gap: 32px;
@@ -165,7 +165,7 @@ footer .logo-img { height: 20px; }
   padding: 0 18px;
 }
 .product .brand { display: flex; align-items: center; }
-.brand-img { height: 15px; width: auto; display: block; }
+.brand-img { height: 12px; width: auto; display: block; }
 .lights { display: flex; gap: 5px; }
 .lights i { width: 7px; height: 7px; border-radius: 50%; background: #d8d2df; }
 .app { display: flex; height: 445px; }
