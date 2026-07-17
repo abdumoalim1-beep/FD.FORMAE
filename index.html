@@ -3,386 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FORMA — نظام مستندات يعمل مثل موظف إضافي</title>
-<meta name="description" content="ارفع قوالبك وبياناتك مرة واحدة، ثم اطلب ما تحتاجه. FORMA تنشئ مستنداتك وتحدّثها تلقائيًا.">
+<title>Forma — توقّف عن تعديل نفس المستند كل مرة</title>
+<meta name="description" content="ارفع قوالبك واحفظ بيانات شركتك مرة واحدة. بعدها، اكتب فقط ما تريد وForma تنشئ مستنداتك.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="page">
+<!-- HERO + NAV -->
+<header class="hero">
+  <nav class="wrap nav">
+    <a href="#" class="logo">
+      <svg width="26" height="26" viewBox="0 0 30 30" fill="currentColor"><path d="M5 7.5 L26 4 L26 9 L5 12.5 Z"/><path d="M5 15 L26 11.5 L26 16.5 L5 20 Z"/><path d="M5 22.5 L26 19 L26 24 L5 27.5 Z"/></svg>
+      <span>Forma</span>
+    </a>
+    <div class="navlinks">
+      <a href="#how">كيف يعمل؟</a>
+      <a href="#teams">للفِرق</a>
+      <a href="#product">المنتج</a>
+      <a href="#faq">الأسئلة</a>
+    </div>
+    <a href="#join" class="navcta">الوصول المبكر ↗</a>
+  </nav>
 
-  <!-- NAV -->
-  <div class="nav-wrap">
-    <header class="nav">
-      <div class="brand">
-        <svg width="17" height="21" viewBox="0 0 17 21" class="brand-mark">
-          <path d="M15.5 1.5H3.5L1.5 3.5V19.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M3.5 1.5V19.5M3.5 10.5H12.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="brand-divider"></span>
-        <span class="brand-name">FORMA</span>
+  <div class="wrap heroGrid">
+    <div class="heroCopy">
+      <div class="badge"><span class="dot"></span>قريبًا · الوصول المبكر مفتوح</div>
+      <h1>توقّف عن تعديل<br/>نفس المستند<span>...</span><br/><span>كل مرة.</span></h1>
+      <p class="lead">ارفع قوالبك واحفظ بيانات شركتك مرة واحدة.<br/>بعدها، اكتب فقط ما تريد.</p>
+      <a href="#join" class="button"><span>انضم إلى قائمة الانتظار</span><span>←</span></a>
+      <p class="micro"><b>طلب واحد.</b> عشرات المستندات الجاهزة خلال ثوانٍ.</p>
+    </div>
+
+    <!-- PRODUCT MOCKUP -->
+    <div class="product">
+      <div class="bar">
+        <div class="brand"><svg width="18" height="18" viewBox="0 0 30 30" fill="currentColor"><path d="M5 7.5 L26 4 L26 9 L5 12.5 Z"/><path d="M5 15 L26 11.5 L26 16.5 L5 20 Z"/><path d="M5 22.5 L26 19 L26 24 L5 27.5 Z"/></svg><span>Forma</span></div>
+        <div class="lights"><i></i><i></i><i></i></div>
       </div>
-      <nav class="nav-links">
-        <a href="#compare">المقارنة</a>
-        <a href="#how">كيف يعمل</a>
-        <a href="#sectors">الأقسام</a>
-        <a href="#faq">الأسئلة</a>
-      </nav>
-      <button class="btn btn-dark btn-nav js-scroll-waitlist">انضم الآن</button>
-    </header>
+      <div class="app">
+        <aside class="rail">
+          <i class="active">◫</i>
+          <i>▱</i>
+          <i>◇</i>
+          <i>⚙</i>
+        </aside>
+        <div class="screen">
+          <div class="space">● مساحة عمل الموارد البشرية</div>
+          <div class="request">
+            <span class="avatar">أ</span>
+            <div><small>أنت</small><b>أنشئ عقود جميع الموظفين الجدد</b></div>
+          </div>
+          <div class="working">
+            <span class="ai">✦</span>
+            <div class="work">
+              <strong>⚡ جاري تنفيذ طلبك...</strong>
+              <div class="progress"></div>
+              <div class="checks">
+                <div><span>✓</span>24 عقد عمل</div>
+                <div><span>✓</span>24 ملف PDF</div>
+                <div><span>✓</span>24 ملف Word</div>
+                <div><span>✓</span>تمت إضافة بيانات الموظفين</div>
+                <div><span>✓</span>جاهزة للإرسال</div>
+              </div>
+            </div>
+          </div>
+          <div class="input"><span>اطلب أي مستند...</span><b>←</b></div>
+        </div>
+      </div>
+    </div>
   </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="badge fade-up" style="animation-delay:0s;">
-      <span class="badge-pill">جديد</span>
-      قوالب ذكية بدون أي إعداد تقني
+<!-- OLD WAY -->
+<section class="section old center">
+  <div class="wrap">
+    <span class="kicker">الطريقة القديمة</span>
+    <h2 class="title">هل يبدو هذا <em>مألوفًا؟</em></h2>
+    <div class="steps">
+      <article class="step">
+        <span class="num">01</span>
+        <div class="icon">📄</div>
+        <h3>نسخ الملف</h3>
+        <p>نفس القالب، مرة أخرى</p>
+      </article>
+      <article class="step">
+        <span class="num">02</span>
+        <div class="icon">✏️</div>
+        <h3>تغيير البيانات</h3>
+        <p>اسمًا بعد اسم</p>
+      </article>
+      <article class="step">
+        <span class="num">03</span>
+        <div class="icon">🖼️</div>
+        <h3>مراجعة التنسيق</h3>
+        <p>وملاحقة الأخطاء</p>
+      </article>
+      <article class="step">
+        <span class="num">04</span>
+        <div class="icon">📤</div>
+        <h3>حفظ وإرسال</h3>
+        <p>ثم ابدأ من جديد</p>
+      </article>
     </div>
-    <h1 class="hero-title fade-up" style="animation-delay:0.08s;">
-      نظام مستندات يعمل مثل<br/>
-      <span class="hero-highlight">موظف إضافي</span>
-    </h1>
-    <p class="hero-sub fade-up" style="animation-delay:0.14s;">
-      ارفع قوالبك وبياناتك مرة واحدة، ثم اطلب ما تحتاجه. FORMA تنشئ مستنداتك وتحدّثها تلقائيًا.
-    </p>
-    <div class="hero-actions fade-up" style="animation-delay:0.2s;">
-      <button class="btn btn-dark btn-lg js-scroll-waitlist">احصل على دعوة</button>
-      <button class="btn btn-outline btn-lg" id="copy-link-btn">انسخ رابط الطلب</button>
-    </div>
-  </section>
+    <div class="repeat">وتكرر هذا... <b>20</b> مرة <b>50</b> مرة <b>100</b> مرة. <em>كل أسبوع.</em></div>
+  </div>
+</section>
 
-  <!-- PROBLEM -->
-  <section class="problem">
-    <h2 class="section-title">فريقك يصرف وقته على شيء واحد: <span class="accent">التكرار</span></h2>
-    <p class="section-sub">نفس المستند، بشكل يدوي، كل مرة — وقت ضائع، وأخطاء تتكرر معه.</p>
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-num">5 ساعات</div>
-        <div class="stat-desc">تُصرف أسبوعيًا لكل موظف على تكرار نفس المستندات</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">1 من 4</div>
-        <div class="stat-desc">مستندات تحتوي خطأ يدويًا في الاسم أو البيانات أو التاريخ</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">+40</div>
-        <div class="stat-desc">نسخة يدوية شهريًا لكل موظف من نفس القالب</div>
-      </div>
+<!-- MAGIC (dark) -->
+<section id="how" class="section magic">
+  <div class="wrap magicGrid">
+    <div class="magicCopy">
+      <span class="kicker">مع FORMA</span>
+      <h2 class="title">اكتبها<br/><em>كما تفكّر بها.</em></h2>
+      <p>لا حقول معقدة. لا تكرار. فقط أخبر FORMA بما تحتاجه.</p>
+      <div class="quote">💬 أنشئ عرض سعر لجميع<br/>العملاء الجدد.</div>
     </div>
-  </section>
-
-  <!-- COMPARE -->
-  <section id="compare" class="compare">
-    <h2 class="section-title center">مستنداتك تتخذ القرار الصحيح <span class="accent">من نفسها</span></h2>
-    <p class="section-sub center">نفس الطلب. طريقتان مختلفتان تمامًا.</p>
-    <div class="compare-grid">
-      <div class="compare-card compare-old">
-        <span class="tag tag-muted">بدون FORMA</span>
-        <div class="compare-list">
-          <div class="compare-item old">
-            <svg width="16" height="16" viewBox="0 0 14 14" class="x-icon"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            افتح الملف وأنشئ نسخة
-          </div>
-          <div class="compare-item old">
-            <svg width="16" height="16" viewBox="0 0 14 14" class="x-icon"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            غيّر الاسم والشعار والتاريخ يدويًا
-          </div>
-          <div class="compare-item old">
-            <svg width="16" height="16" viewBox="0 0 14 14" class="x-icon"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            راجع الأخطاء
-          </div>
-          <div class="compare-item old">
-            <svg width="16" height="16" viewBox="0 0 14 14" class="x-icon"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            كرر نفس الخطوات لكل عميل
-          </div>
-        </div>
-      </div>
-      <div class="compare-card compare-new">
-        <span class="tag tag-accent">مع FORMA</span>
-        <div class="compare-list">
-          <div class="compare-item new">
-            <svg width="18" height="18" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.5 8.2L7 10.5L11.5 5.5" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            تم إنشاء 12 عقدًا
-          </div>
-          <div class="compare-item new">
-            <svg width="18" height="18" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.5 8.2L7 10.5L11.5 5.5" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            تم استخدام أحدث قالب
-          </div>
-          <div class="compare-item new">
-            <svg width="18" height="18" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.5 8.2L7 10.5L11.5 5.5" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            تم تطبيق بيانات الموظفين
-          </div>
-          <div class="compare-item new">
-            <svg width="18" height="18" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="currentColor"/><path d="M4.5 8.2L7 10.5L11.5 5.5" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            المستندات جاهزة للتنزيل
-          </div>
-        </div>
-        <div class="compare-foot">مستند جاهز خلال ثوانٍ، بدون أخطاء.</div>
+    <div class="gen">
+      <div class="genhead"><b>⚡ يتم الإنشاء الآن</b><span>5 مستندات</span></div>
+      <div class="progress"></div>
+      <div class="files">
+        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — شركة ألف</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
+        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — شركة باء</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
+        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — أحمد</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
+        <div class="file"><span class="fileIcon">▤</span><div><strong>عقد خدمات</strong><small>عقد</small></div><span class="done">✓</span></div>
+        <div class="file"><span class="fileIcon">▤</span><div><strong>خطاب رسمي</strong><small>خطاب</small></div><span class="done">✓</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- HOW IT WORKS -->
-  <section id="how" class="how">
-    <h2 class="section-title center">من الرفع إلى <span class="accent">الاستلام</span> في 3 خطوات</h2>
-    <p class="section-sub center">بدون أي إعداد تقني من فريقك.</p>
-    <div class="how-list">
-      <div class="how-item">
-        <span class="how-num mono">01</span>
-        <div>
-          <h3 class="how-title">ارفع ملفاتك الحالية</h3>
-          <p class="how-desc">عقودك وتقاريرك وعروضك بنفس تنسيقها المعتاد، بدون أي تغيير.</p>
-        </div>
-      </div>
-      <div class="how-item">
-        <span class="how-num mono">02</span>
-        <div>
-          <h3 class="how-title">اطلب ما تحتاجه</h3>
-          <p class="how-desc">اكتب طلبك بلغة عادية، وFORMA تفهم المطلوب وتنفذه.</p>
-        </div>
-      </div>
-      <div class="how-item">
-        <span class="how-num mono">03</span>
-        <div>
-          <h3 class="how-title">استلم مستندك جاهزًا</h3>
-          <p class="how-desc">ملف نظيف ودقيق، بنفس هوية شركتك، خلال ثوانٍ.</p>
-        </div>
-      </div>
+<!-- SMART -->
+<section class="section smart center">
+  <div class="wrap">
+    <span class="kicker">كيف يعمل؟</span>
+    <h2 class="title">ارفعها مرة واحدة. <em>اطلبها للأبد.</em></h2>
+    <p class="lead-narrow">ثلاث خطوات تفصل فريقك عن آخر نسخة يدوية في تاريخه.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="cardTop"><div class="icon">📄</div><small>01</small></div>
+        <h3>قوالبك، كما هي.</h3>
+        <p>ارفع عقودك وعروضك الحالية بنفس هويتها وتنسيقها. لا تعيد بناء أي شيء.</p>
+        <div class="tags"><span>Word</span><span>PowerPoint</span><span>PDF</span><span>Excel</span></div>
+      </article>
+      <article class="card">
+        <div class="cardTop"><div class="icon">🗂️</div><small>02</small></div>
+        <h3>بياناتك، تُحفظ مرة واحدة.</h3>
+        <p>موظفوك وعملاؤك وأسعارك في مكان واحد — وكل مستند جديد يسحبها تلقائيًا، بلا خطأ واحد.</p>
+        <div class="tags"><span>موظفون</span><span>عملاء</span><span>منتجات</span><span>أسعار</span></div>
+      </article>
+      <article class="card">
+        <div class="cardTop"><div class="icon">✦</div><small>03</small></div>
+        <h3>اطلب بجملة. استلم بالعشرات.</h3>
+        <p>«أنشئ عقود الموظفين الجدد» — وخلال ثوانٍ تستلم ملفات مكتملة جاهزة للإرسال.</p>
+        <div class="tags"><span>فوري</span><span>دقيق</span><span>آمن</span></div>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="features-grid">
-      <div class="feature-mock">
-        <div class="mock-card">
-          <span class="mock-tag">قالب</span>
-          <div class="mock-title">عقد عمل — موظف جديد</div>
-          <div class="mock-lines">
-            <div class="mock-line" style="width:90%;"></div>
-            <div class="mock-line" style="width:70%;"></div>
-          </div>
-          <div class="mock-footer">
-            <span>تم التحديث اليوم</span>
-            <span class="mock-avatar"></span>
-          </div>
-        </div>
-        <div class="mock-chip">
-          <span class="mock-dot"></span>
-          تم إنشاء 12 مستندًا
-        </div>
+<!-- TEAMS -->
+<section id="teams" class="section teams">
+  <div class="wrap">
+    <div class="headrow">
+      <div>
+        <span class="kicker">منتج واحد. كل الأقسام.</span>
+        <h2 class="title">مناسب لكل فريق<br/>داخل شركتك.</h2>
       </div>
-      <div class="feature-copy">
-        <h2 class="section-title">قدرات FORMA الأساسية</h2>
-        <div class="chips">
-          <span class="chip">إدارة القوالب</span>
-          <span class="chip">دمج البيانات</span>
-          <span class="chip">تنبيهات فورية</span>
-          <span class="chip">مزامنة لحظية</span>
-          <span class="chip">أولوية تلقائية</span>
-        </div>
-        <button class="btn btn-accent js-scroll-waitlist">احصل على وصول مبكر</button>
-      </div>
+      <p>منصة واحدة تتكلم لغة كل قسم —<br/>وتُخرج كل ملف بهوية شركتك، بلا استثناء.</p>
     </div>
-  </section>
+    <div class="departments">
+      <article class="dept"><div class="icon">👥</div><div><h3>الموارد البشرية</h3><p>عقود · شهادات · خطابات</p></div></article>
+      <article class="dept"><div class="icon">💰</div><div><h3>المالية</h3><p>فواتير · تقارير · ميزانيات</p></div></article>
+      <article class="dept"><div class="icon">📈</div><div><h3>المبيعات</h3><p>عروض أسعار · عقود · مقترحات</p></div></article>
+      <article class="dept"><div class="icon">⚙️</div><div><h3>العمليات</h3><p>نماذج · تقارير · طلبات</p></div></article>
+      <article class="dept"><div class="icon">📣</div><div><h3>التسويق</h3><p>عروض · حملات · تقارير</p></div></article>
+      <article class="dept"><div class="icon">🏛️</div><div><h3>الإدارة</h3><p>خطابات · محاضر · نماذج</p></div></article>
+    </div>
+  </div>
+</section>
 
-  <!-- SECTORS -->
-  <section id="sectors" class="sectors">
-    <h2 class="section-title center">منصة واحدة. <span class="accent">لكل قسم.</span></h2>
-    <div class="sector-grid">
-      <div class="sector-card span-2">
-        <div>
-          <h3 class="sector-title">الموارد البشرية</h3>
-          <p class="sector-desc">العقود، خطابات العرض، الشهادات، خطابات الموظفين.</p>
-        </div>
-        <div class="sector-tags">
-          <span class="sector-tag">عقود</span>
-          <span class="sector-tag">شهادات</span>
-        </div>
-      </div>
-      <div class="sector-card span-2 sector-accent">
-        <div>
-          <h3 class="sector-title">المبيعات</h3>
-          <p class="sector-desc">عروض الأسعار، المقترحات، العقود، ملفات العملاء.</p>
-        </div>
-        <div class="sector-tags">
-          <span class="sector-tag">عروض أسعار</span>
-        </div>
-      </div>
-      <div class="sector-card span-1">
-        <div>
-          <h3 class="sector-title">التسويق</h3>
-          <p class="sector-desc">تقارير الحملات، ملفات العملاء، عروض الشراكات.</p>
-        </div>
-        <div class="sector-tags">
-          <span class="sector-tag">تقارير</span>
-        </div>
-      </div>
-      <div class="sector-card span-1">
-        <div>
-          <h3 class="sector-title">العمليات</h3>
-          <p class="sector-desc">التقارير، النماذج، الخطابات الداخلية.</p>
-        </div>
-        <div class="sector-tags">
-          <span class="sector-tag">نماذج</span>
-        </div>
-      </div>
-      <div class="sector-card span-1">
-        <div>
-          <h3 class="sector-title">المالية</h3>
-          <p class="sector-desc">الفواتير، أوامر الشراء، الميزانيات.</p>
-        </div>
-        <div class="sector-tags">
-          <span class="sector-tag">فواتير</span>
-        </div>
-      </div>
-      <div class="sector-card span-1">
-        <div>
-          <h3 class="sector-title">الإدارة</h3>
-          <p class="sector-desc">المراسلات، محاضر الاجتماعات، الخطط.</p>
-        </div>
-        <div class="sector-tags">
-          <span class="sector-tag">محاضر</span>
+<!-- CHAT (dark) -->
+<section id="product" class="section chat">
+  <div class="wrap chatGrid">
+    <div class="chatCopy">
+      <span class="kicker">بساطة غير معتادة</span>
+      <h2 class="title">مجرد<br/><em>محادثة.</em></h2>
+      <p>لا لوحات تحكم ولا قوائم معقدة. تكتب الأمر كما تقوله لزميلك — وFORMA تنفذه على كل المستندات المرتبطة، فورًا.</p>
+    </div>
+    <div class="demo">
+      <div class="demoTop"><b>✦ مساعد FORMA</b><span class="online">● متصل</span></div>
+      <div class="conversation">
+        <div class="bubble">غيّر السعر إلى 950 ريال.</div>
+        <div class="answer">
+          <span class="done">✓</span>
+          <div>
+            <b>تم تحديث 3 مستندات</b>
+            <div class="created">▤ العقد · عرض السعر · التقرير</div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- RESULTS -->
-  <section class="results">
-    <div class="results-grid">
-      <div class="results-copy">
-        <h2 class="section-title">النتائج التي تحصل عليها</h2>
-        <p class="results-sub">وقت أقل، دقة أعلى، وفريق يركّز على ما يهم.</p>
-        <div class="advantages">
-          <div class="advantage">
-            <span class="advantage-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2.4"/><path d="M12 7v5l3.2 2" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span class="advantage-text">توفير حتى 40% من وقت الفريق</span>
-          </div>
-          <div class="advantage">
-            <span class="advantage-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2.4"/><path d="M8 12.5l2.6 2.6L16.5 9" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-            <span class="advantage-text">صفر أخطاء يدوية في النسخ</span>
-          </div>
-          <div class="advantage">
-            <span class="advantage-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="8.5" cy="8" r="3" stroke="white" stroke-width="2.4"/><circle cx="16" cy="9" r="2.3" stroke="white" stroke-width="2.4"/><path d="M3.2 19.5c.5-3.4 2.8-5.5 5.3-5.5s4.8 2.1 5.3 5.5" stroke="white" stroke-width="2.4" stroke-linecap="round"/><path d="M14.8 14.4c2.1.3 3.8 2 4.3 5.1" stroke="white" stroke-width="2.4" stroke-linecap="round"/></svg>
-            </span>
-            <span class="advantage-text">مستندات موحّدة لكل الفريق</span>
-          </div>
-          <div class="advantage">
-            <span class="advantage-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3.5 9c4.7-4.3 12.3-4.3 17 0" stroke="white" stroke-width="2.4" stroke-linecap="round"/><path d="M6.8 12.8c3.1-2.7 7.3-2.7 10.4 0" stroke="white" stroke-width="2.4" stroke-linecap="round"/><path d="M10 16.6c1.2-1 2.8-1 4 0" stroke="white" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="19.5" r="1.4" fill="white"/></svg>
-            </span>
-            <span class="advantage-text">يعمل باستمرار حتى دون اتصال</span>
-          </div>
-        </div>
+<!-- STATEMENT -->
+<section class="statement">
+  <div class="wrap">
+    <h2>فريقك لم يُوظّف<br/>لنسخ ولصق البيانات.</h2>
+    <p>بل ليبني الشركة.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section faq">
+  <div class="wrap wrap-narrow">
+    <h2 class="title center">أسئلة <em>شائعة.</em></h2>
+    <div class="faqList">
+      <div class="faqItem">
+        <button class="faqQ">شنو تسوي FORMA بالضبط؟<span class="faqIcon">+</span></button>
+        <p class="faqA">ترفع قوالبك وبياناتك مرة واحدة، وتطلب من FORMA إنشاء أو تحديث مستنداتك بمحادثة بسيطة.</p>
       </div>
-      <div class="results-mock">
-        <div class="mock-panel bar-panel">
-          <div class="bar-label">إجمالي المستندات</div>
-          <div class="bar-value">214</div>
-          <div class="bar-chart">
-            <div class="bar" style="height:16px;"></div>
-            <div class="bar" style="height:26px;"></div>
-            <div class="bar accent" style="height:34px;"></div>
-            <div class="bar accent" style="height:44px;"></div>
-          </div>
-        </div>
-        <div class="mock-panel donut-panel">
-          <div class="donut"><div class="donut-inner">40%</div></div>
-          <div class="donut-label">زيادة في الكفاءة</div>
-        </div>
+      <div class="faqItem">
+        <button class="faqQ">شنو التكلفة؟<span class="faqIcon">+</span></button>
+        <p class="faqA">الأسعار تُعلن عند الإطلاق. المسجلون في قائمة الانتظار يحصلون على عروض تسعير حصرية.</p>
+      </div>
+      <div class="faqItem">
+        <button class="faqQ">هل تدعم القوالب العربية؟<span class="faqIcon">+</span></button>
+        <p class="faqA">نعم، FORMA مبنية للعمل بالعربية والإنجليزية معًا، وتحافظ على تنسيق القالب الأصلي.</p>
+      </div>
+      <div class="faqItem">
+        <button class="faqQ">من وين تجي البيانات؟<span class="faqIcon">+</span></button>
+        <p class="faqA">من الملفات والقوالب التي ترفعها أنت، وبيانات الموظفين والعملاء التي تحفظها داخل FORMA.</p>
+      </div>
+      <div class="faqItem">
+        <button class="faqQ">كم تحتاج وقت للتحديث؟<span class="faqIcon">+</span></button>
+        <p class="faqA">ثوانٍ لكل مستند، وحتى عشرات المستندات دفعة واحدة في نفس الوقت.</p>
+      </div>
+      <div class="faqItem">
+        <button class="faqQ">هل تدرّبون النظام على بيانات شركتنا؟<span class="faqIcon">+</span></button>
+        <p class="faqA">لا. بياناتك تُستخدم فقط لإنشاء مستنداتك، ولا تُستخدم لتدريب أي نموذج آخر.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TESTIMONIAL -->
-  <section class="testimonial">
-    <div class="testimonial-avatar" aria-hidden="true"></div>
-    <p class="testimonial-quote">"من أول أسبوع وفّرنا ساعات كنا نصرفها كل يوم على تكرار نفس المستندات."</p>
-    <div class="testimonial-role">مدير العمليات، شركة شريكة</div>
-  </section>
+<!-- FINAL CTA -->
+<section id="join" class="final">
+  <div class="wrap">
+    <span class="kicker light">ابدأ من هنا</span>
+    <h2>العمل المتكرر<br/>ينتهي هنا.</h2>
 
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <h2 class="section-title center">الأسئلة الشائعة</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">
-          <span>شنو تسوي FORMA بالضبط؟</span>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-a">ترفع قوالبك وبياناتك مرة واحدة، وتطلب من FORMA إنشاء أو تحديث مستنداتك بمحادثة بسيطة.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span>شنو التكلفة؟</span>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-a">الأسعار تُعلن عند الإطلاق. المسجلون في قائمة الانتظار يحصلون على عروض تسعير حصرية.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span>هل تدعم القوالب العربية؟</span>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-a">نعم، FORMA مبنية للعمل بالعربية والإنجليزية معًا، وتحافظ على تنسيق القالب الأصلي.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span>من وين تجي البيانات؟</span>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-a">من الملفات والقوالب التي ترفعها أنت، وبيانات الموظفين والعملاء التي تحفظها داخل FORMA.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span>كم تحتاج وقت للتحديث؟</span>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-a">ثوانٍ لكل مستند، وحتى عشرات المستندات دفعة واحدة في نفس الوقت.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">
-          <span>هل تدرّبون النظام على بيانات شركتنا؟</span>
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-a">لا. بياناتك تُستخدم فقط لإنشاء مستنداتك، ولا تُستخدم لتدريب أي نموذج آخر.</div>
-      </div>
+    <div class="ctaSuccess" id="cta-success" hidden>
+      <span class="done">✓</span>
+      تم التسجيل! سنراسلك عند فتح الوصول المبكر.
     </div>
-  </section>
 
-  <!-- FINAL CTA -->
-  <section id="waitlist" class="cta">
-    <div class="cta-inner">
-      <h2 class="cta-title">العمل المتكرر له نهاية.</h2>
-      <p class="cta-sub">انضم إلى قائمة الانتظار وكن من أوائل الشركات التي تستخدم FORMA.</p>
-      <form class="cta-form" id="waitlist-form">
-        <input type="email" id="waitlist-email" placeholder="بريد العمل" required class="cta-input"/>
-        <button type="submit" class="btn btn-dark btn-lg">احجز وصولك المبكر</button>
-      </form>
-      <div class="cta-success" id="waitlist-success" hidden>تم تسجيلك بنجاح — سنتواصل معك قريبًا.</div>
-      <div class="cta-note">لا تحتاج بطاقة ائتمانية • أماكن الوصول المبكر محدودة</div>
-    </div>
-  </section>
+    <form class="form" id="waitlist-form">
+      <input type="email" dir="ltr" placeholder="you@company.com" id="waitlist-email" required/>
+      <button type="submit">احجز وصولك المبكر ←</button>
+    </form>
 
-  <footer class="footer">
-    <div class="footer-brand">
-      <svg width="15" height="18" viewBox="0 0 17 21"><path d="M15.5 1.5H3.5L1.5 3.5V19.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 1.5V19.5M3.5 10.5H12.5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span class="footer-divider"></span>
-      <span class="footer-name">FORMA</span>
-    </div>
-    <div>© 2026</div>
-  </footer>
-</div>
+    <small>⚡ مقاعد الوصول المبكر محدودة — المسجلون الأوائل يحصلون على تسعير المؤسسين.</small>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="logo">
+      <svg width="20" height="20" viewBox="0 0 30 30" fill="currentColor"><path d="M5 7.5 L26 4 L26 9 L5 12.5 Z"/><path d="M5 15 L26 11.5 L26 16.5 L5 20 Z"/><path d="M5 22.5 L26 19 L26 24 L5 27.5 Z"/></svg>
+      <span>Forma</span>
+    </a>
+    <small>نحو عملٍ أقل تكرارًا.</small>
+    <small>© 2026 FORMA</small>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 </body>
