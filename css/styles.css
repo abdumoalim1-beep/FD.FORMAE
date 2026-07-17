@@ -42,14 +42,10 @@ a { text-decoration: none; color: inherit; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 9px;
   direction: ltr;
-  color: var(--ink);
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
 }
-footer .logo { font-size: 15px; }
+.logo-img { height: 26px; width: auto; display: block; }
+footer .logo-img { height: 20px; }
 .navlinks {
   display: flex;
   gap: 32px;
@@ -168,14 +164,8 @@ footer .logo { font-size: 15px; }
   justify-content: space-between;
   padding: 0 18px;
 }
-.product .brand {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: var(--ink);
-  font-size: 13px;
-  font-weight: 700;
-}
+.product .brand { display: flex; align-items: center; }
+.brand-img { height: 15px; width: auto; display: block; }
 .lights { display: flex; gap: 5px; }
 .lights i { width: 7px; height: 7px; border-radius: 50%; background: #d8d2df; }
 .app { display: flex; height: 445px; }
@@ -531,7 +521,6 @@ footer .logo { font-size: 15px; }
 /* FOOTER */
 footer { padding: 32px 0; background: var(--dark); color: #fff; }
 footer .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
-footer .logo { color: #fff; }
 footer small { color: #8d8792; font-size: 12px; }
 
 @keyframes load { 0% { width: 0; } 65%, 100% { width: 100%; } }
