@@ -11,21 +11,21 @@ const SUPABASE_URL = 'https://ypsbkrolcspycaihfkno.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_uySWgbSM1O2oPoIrOtclcA_S-fXYFHO';
 
 const modal = document.getElementById('waitlist-modal');
-const openModalBtns = document.querySelectorAll('.js-open-modal');
+const openModalBtn = document.getElementById('open-waitlist-modal');
 const closeModalBtn = document.getElementById('modal-close');
 const modalForm = document.getElementById('modal-form');
-const joinOpenBtn = document.getElementById('join-open-modal');
 const ctaSuccess = document.getElementById('cta-success');
 
 function openModal() {
   modal.hidden = false;
+  document.getElementById('q-doc').focus();
 }
 
 function closeModal() {
   modal.hidden = true;
 }
 
-openModalBtns.forEach((btn) => btn.addEventListener('click', openModal));
+if (openModalBtn) openModalBtn.addEventListener('click', openModal);
 if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
 if (modal) {
   modal.addEventListener('click', (e) => {
@@ -36,11 +36,18 @@ if (modal) {
   });
 }
 
+const painOtherInput = document.getElementById('q-pain-other');
+
 document.querySelectorAll('.pillGroup').forEach((group) => {
   group.querySelectorAll('.pill').forEach((pill) => {
     pill.addEventListener('click', () => {
       group.querySelectorAll('.pill').forEach((p) => p.classList.remove('selected'));
       pill.classList.add('selected');
+      if (group.dataset.field === 'main_problem' && painOtherInput) {
+        const isOther = pill.dataset.other === 'true';
+        painOtherInput.hidden = !isOther;
+        if (isOther) painOtherInput.focus();
+      }
     });
   });
 });
@@ -57,12 +64,16 @@ if (modalForm) {
     const email = document.getElementById('q-email').value.trim();
     if (!email) return;
 
+    const mainProblemPill = document.querySelector('.pillGroup[data-field="main_problem"] .pill.selected');
+    const mainProblem = mainProblemPill && mainProblemPill.dataset.other === 'true'
+      ? (painOtherInput.value.trim() || null)
+      : selectedPill('main_problem');
+
     const payload = {
       email,
-      field_of_work: selectedPill('field_of_work'),
       document_type: document.getElementById('q-doc').value.trim() || null,
       monthly_volume: selectedPill('monthly_volume'),
-      main_problem: document.getElementById('q-pain').value.trim() || null,
+      main_problem: mainProblem,
     };
 
     const submitBtn = modalForm.querySelector('.modalSubmit');
@@ -87,8 +98,8 @@ if (modalForm) {
       }
 
       closeModal();
-      if (joinOpenBtn) joinOpenBtn.hidden = true;
-      if (ctaSuccess) ctaSuccess.hidden = false;
+      openModalBtn.hidden = true;
+      ctaSuccess.hidden = false;
     } catch (err) {
       alert('حدث خطأ أثناء التسجيل، حاول مرة أخرى.');
     } finally {
