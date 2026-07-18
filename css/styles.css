@@ -116,6 +116,7 @@ footer .logo-img { height: 16px; }
   font-weight: 700;
 }
 .hero h1 span { color: var(--p); }
+.hero h1 .slant { font-style: italic; color: inherit; }
 .lead {
   font-size: 17px;
   line-height: 2;
