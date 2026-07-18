@@ -10,16 +10,61 @@ document.querySelectorAll('.faqItem').forEach((item) => {
 const SUPABASE_URL = 'https://ypsbkrolcspycaihfkno.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_uySWgbSM1O2oPoIrOtclcA_S-fXYFHO';
 
-const waitlistForm = document.getElementById('waitlist-form');
+const modal = document.getElementById('waitlist-modal');
+const openModalBtn = document.getElementById('open-waitlist-modal');
+const closeModalBtn = document.getElementById('modal-close');
+const modalForm = document.getElementById('modal-form');
 const ctaSuccess = document.getElementById('cta-success');
-if (waitlistForm) {
-  waitlistForm.addEventListener('submit', async (e) => {
+
+function openModal() {
+  modal.hidden = false;
+  document.getElementById('q-doc').focus();
+}
+
+function closeModal() {
+  modal.hidden = true;
+}
+
+if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+if (modal) {
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+}
+
+document.querySelectorAll('.pillGroup').forEach((group) => {
+  group.querySelectorAll('.pill').forEach((pill) => {
+    pill.addEventListener('click', () => {
+      group.querySelectorAll('.pill').forEach((p) => p.classList.remove('selected'));
+      pill.classList.add('selected');
+    });
+  });
+});
+
+function selectedPill(fieldName) {
+  const group = document.querySelector(`.pillGroup[data-field="${fieldName}"]`);
+  const selected = group.querySelector('.pill.selected');
+  return selected ? selected.textContent : null;
+}
+
+if (modalForm) {
+  modalForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const emailInput = document.getElementById('waitlist-email');
-    const email = emailInput.value.trim();
+    const email = document.getElementById('q-email').value.trim();
     if (!email) return;
 
-    const submitBtn = waitlistForm.querySelector('button[type="submit"]');
+    const payload = {
+      email,
+      document_type: document.getElementById('q-doc').value.trim() || null,
+      monthly_volume: selectedPill('monthly_volume'),
+      main_problem: selectedPill('main_problem'),
+    };
+
+    const submitBtn = modalForm.querySelector('.modalSubmit');
     const originalLabel = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'جارٍ الحجز...';
@@ -33,14 +78,15 @@ if (waitlistForm) {
           Authorization: `Bearer ${SUPABASE_KEY}`,
           Prefer: 'return=minimal',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok && res.status !== 409) {
         throw new Error(`Request failed: ${res.status}`);
       }
 
-      waitlistForm.hidden = true;
+      closeModal();
+      openModalBtn.hidden = true;
       ctaSuccess.hidden = false;
     } catch (err) {
       submitBtn.disabled = false;

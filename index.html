@@ -261,14 +261,55 @@
       تم التسجيل! سنراسلك عند فتح الوصول المبكر.
     </div>
 
-    <form class="form" id="waitlist-form">
-      <input type="email" dir="ltr" placeholder="you@company.com" id="waitlist-email" required/>
-      <button type="submit">احجز وصولك المبكر ←</button>
-    </form>
+    <button type="button" class="joinTrigger" id="open-waitlist-modal">احجز وصولك المبكر ←</button>
 
     <small>⚡ مقاعد الوصول المبكر محدودة — المسجلون الأوائل يحصلون على تسعير المؤسسين.</small>
   </div>
 </section>
+
+<!-- WAITLIST MODAL -->
+<div class="modalOverlay" id="waitlist-modal" hidden>
+  <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modalHead">
+      <button type="button" class="modalClose" id="modal-close" aria-label="إغلاق">×</button>
+      <div>
+        <h3 id="modal-title">احجز وصولك المبكر</h3>
+        <p class="modalSub">٣ أسئلة سريعة تساعدنا نجهّز حسابك بالشكل الصحيح.</p>
+      </div>
+    </div>
+    <form id="modal-form">
+      <div class="field">
+        <label><span class="qnum">01</span>ما أكثر مستند تنشئه أو تعدّله باستمرار؟</label>
+        <input type="text" id="q-doc" placeholder="عقود، عروض أسعار، تقارير، خطابات...">
+      </div>
+      <div class="field">
+        <label><span class="qnum">02</span>كم مرة تتعامل معه شهريًا؟</label>
+        <div class="pillGroup" data-field="monthly_volume">
+          <button type="button" class="pill">أكثر من 100</button>
+          <button type="button" class="pill">100–51</button>
+          <button type="button" class="pill">50–11</button>
+          <button type="button" class="pill">10–1</button>
+        </div>
+      </div>
+      <div class="field">
+        <label><span class="qnum">03</span>ما أكبر مشكلة تواجهك عند إنشاء أو تعديل المستندات؟</label>
+        <div class="pillGroup" data-field="main_problem">
+          <button type="button" class="pill">نسخ ولصق يدوي</button>
+          <button type="button" class="pill">تنسيق يضيع بين البرامج</button>
+          <button type="button" class="pill">تكرار نفس المستند</button>
+          <button type="button" class="pill">أخطاء بالبيانات</button>
+          <button type="button" class="pill">أخرى</button>
+        </div>
+      </div>
+      <div class="field">
+        <label>بريدك الإلكتروني</label>
+        <input type="email" id="q-email" dir="ltr" placeholder="you@company.com" required>
+      </div>
+      <button type="submit" class="modalSubmit">تأكيد الحجز ←</button>
+      <p class="modalHint">أو اضغط Enter للإرسال</p>
+    </form>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
