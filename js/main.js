@@ -11,21 +11,21 @@ const SUPABASE_URL = 'https://ypsbkrolcspycaihfkno.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_uySWgbSM1O2oPoIrOtclcA_S-fXYFHO';
 
 const modal = document.getElementById('waitlist-modal');
-const openModalBtn = document.getElementById('open-waitlist-modal');
+const openModalBtns = document.querySelectorAll('.js-open-modal');
 const closeModalBtn = document.getElementById('modal-close');
 const modalForm = document.getElementById('modal-form');
+const joinOpenBtn = document.getElementById('join-open-modal');
 const ctaSuccess = document.getElementById('cta-success');
 
 function openModal() {
   modal.hidden = false;
-  document.getElementById('q-doc').focus();
 }
 
 function closeModal() {
   modal.hidden = true;
 }
 
-if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+openModalBtns.forEach((btn) => btn.addEventListener('click', openModal));
 if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
 if (modal) {
   modal.addEventListener('click', (e) => {
@@ -59,9 +59,10 @@ if (modalForm) {
 
     const payload = {
       email,
+      field_of_work: selectedPill('field_of_work'),
       document_type: document.getElementById('q-doc').value.trim() || null,
       monthly_volume: selectedPill('monthly_volume'),
-      main_problem: selectedPill('main_problem'),
+      main_problem: document.getElementById('q-pain').value.trim() || null,
     };
 
     const submitBtn = modalForm.querySelector('.modalSubmit');
@@ -86,12 +87,13 @@ if (modalForm) {
       }
 
       closeModal();
-      openModalBtn.hidden = true;
-      ctaSuccess.hidden = false;
+      if (joinOpenBtn) joinOpenBtn.hidden = true;
+      if (ctaSuccess) ctaSuccess.hidden = false;
     } catch (err) {
+      alert('حدث خطأ أثناء التسجيل، حاول مرة أخرى.');
+    } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = originalLabel;
-      alert('حدث خطأ أثناء التسجيل، حاول مرة أخرى.');
     }
   });
 }
