@@ -3,181 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Forma — مستنداتك، بأمر واحد</title>
-<meta name="description" content="ارفع قوالبك واحفظ بيانات شركتك مرة واحدة. بعدها، اكتب فقط ما تريد وForma تنشئ مستنداتك.">
+<title>Forma — توقّف عن تعديل الملفات نفسها كل مرة</title>
+<meta name="description" content="ارفع ملفك، حدّد المطلوب، ودَع FORMA تنشئ جميع النسخ تلقائيًا.">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<!-- HERO + NAV -->
+<!-- HERO -->
 <header class="hero">
   <nav class="wrap nav">
     <a href="#" class="logo">
       <img src="assets/forma-logo-dark.png" alt="Forma" class="logo-img">
     </a>
     <div class="navlinks">
-      <a href="#how">كيف يعمل؟</a>
-      <a href="#teams">للفِرق</a>
-      <a href="#product">المنتج</a>
+      <a href="#steps">كيف تعمل</a>
+      <a href="#teams">الاستخدامات</a>
       <a href="#faq">الأسئلة</a>
     </div>
-    <a href="#join" class="navcta">الوصول المبكر</a>
+    <div class="navActions">
+      <button type="button" class="navcta js-open-modal">جرّب FORMA</button>
+    </div>
   </nav>
 
-  <div class="wrap heroGrid">
-    <div class="heroCopy">
-      <div class="badge"><span class="dot"></span>قريبًا · الوصول المبكر مفتوح</div>
-      <h1><em class="slant">توقّف عن تعديل<br/>نفس المستند<span>...</span></em><br/><span>كل مرة</span></h1>
-      <p class="lead">ارفع قالبك وبياناتك وصورك الموجودة.<br/>ودع FORMA تنشئ جميع النسخ دفعة واحدة</p>
-      <a href="#join" class="button"><span>انضم إلى قائمة الانتظار</span><span>←</span></a>
-      <p class="micro"><b>طلب واحد.</b> عشرات المستندات الجاهزة خلال ثوانٍ</p>
+  <div class="rings">
+    <span class="ring ring1"></span>
+    <span class="ring ring2"></span>
+    <span class="ring ring3"></span>
+  </div>
+
+  <div class="heroCenter">
+    <div class="fileBadges">
+      <span class="fileBadge" title="Word" style="--fc:#3d6fd6"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="#3d6fd6"></path><path d="M15 2v5h5" fill="none" stroke="#fff" stroke-width="1.3"></path></svg></span>
+      <span class="fileBadge" title="PowerPoint"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="#d5722f"></path><path d="M15 2v5h5" fill="none" stroke="#fff" stroke-width="1.3"></path></svg></span>
+      <span class="fileBadge" title="Excel"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="#2eaf78"></path><path d="M15 2v5h5" fill="none" stroke="#fff" stroke-width="1.3"></path></svg></span>
+      <span class="fileBadge" title="CSV"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="#8a8390"></path><path d="M15 2v5h5" fill="none" stroke="#fff" stroke-width="1.3"></path></svg></span>
+      <span class="fileBadge" title="Google Drive"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="#f0b429"></path><path d="M15 2v5h5" fill="none" stroke="#fff" stroke-width="1.3"></path></svg></span>
+    </div>
+    <p class="fileBadgesCaption">تعمل مع ملفاتك الحالية</p>
+
+    <h1>توقّف عن تعديل الملفات نفسها…<br><em>كل مرة</em></h1>
+    <p class="lead">ارفع ملفك، حدّد المطلوب، ودَع FORMA تنشئ جميع النسخ تلقائيًا</p>
+
+    <div class="heroActions">
+      <button type="button" class="button js-open-modal">جرّب FORMA</button>
+      <a href="#before-after" class="watchLink">شاهد كيف تعمل</a>
     </div>
 
-    <!-- PRODUCT MOCKUP -->
-    <div class="product">
-      <div class="bar">
-        <div class="brand"><img src="assets/forma-logo-dark.png" alt="Forma" class="brand-img"></div>
-        <div class="lights"><i></i><i></i><i></i></div>
+    <!-- ROTATING DEMO BAR -->
+    <div class="demoBar" id="hero-demo">
+      <div class="demoBarRow">
+        <span class="demoChip" id="hero-demo-file">📎 الموظفين_الجدد.xlsx</span>
+        <span class="demoRequest" id="hero-demo-request">أنشئ عقود جميع الموظفين الجدد</span>
+        <button type="button" class="demoRunBtn">تنفيذ ←</button>
       </div>
-      <div class="app">
-        <aside class="rail">
-          <i class="active">◫</i>
-          <i>▱</i>
-          <i>◇</i>
-          <i>⚙</i>
-        </aside>
-        <div class="screen">
-          <div class="space">● مساحة عمل الموارد البشرية</div>
-          <div class="uploadChips">
-            <span class="uploadChip">📄 قالب عقد العمل.docx</span>
-            <span class="uploadChip">📊 الموظفون الجدد.xlsx — 24 موظفًا</span>
-          </div>
-          <div class="request">
-            <span class="avatar">أ</span>
-            <div><small>أنت</small><b>أنشئ عقود جميع الموظفين الجدد</b></div>
-          </div>
-          <div class="working">
-            <span class="ai">✦</span>
-            <div class="work">
-              <strong>⚡ جاري تنفيذ طلبك...</strong>
-              <div class="progress"></div>
-              <div class="checks">
-                <div><span>✓</span>24 عقد عمل</div>
-                <div><span>✓</span>24 ملف PDF</div>
-                <div><span>✓</span>24 ملف Word</div>
-                <div><span>✓</span>تمت إضافة بيانات الموظفين</div>
-                <div><span>✓</span>جاهزة للإرسال</div>
-              </div>
-            </div>
-          </div>
-          <div class="input"><span>اطلب أي مستند...</span><b>←</b></div>
-        </div>
+      <div class="progress" id="hero-demo-progress"><div class="progressBar"></div></div>
+      <div class="demoResult" id="hero-demo-result">
+        <div class="demoResultLabel"><span class="done">✓</span><span id="hero-demo-result-label">تم إنشاء 24 عقدًا</span></div>
+        <div class="demoResultFiles" id="hero-demo-result-files"></div>
       </div>
     </div>
+    <p class="microNote">طلب واحد. عشرات الملفات الجاهزة.</p>
   </div>
+  <div class="heroSpacer"></div>
 </header>
 
-<!-- OLD WAY -->
-<section class="section old center">
-  <div class="wrap">
-    <span class="kicker">الطريقة القديمة</span>
-    <h2 class="title">هل يبدو هذا <em>مألوفًا؟</em></h2>
-    <div class="steps">
-      <article class="step">
-        <span class="num">01</span>
-        <div class="icon">📄</div>
-        <h3>نسخ الملف</h3>
-        <p>نفس القالب، مرة أخرى</p>
-      </article>
-      <article class="step">
-        <span class="num">02</span>
-        <div class="icon">✏️</div>
-        <h3>تغيير البيانات</h3>
-        <p>اسمًا ورقمًا بعد آخر</p>
-      </article>
-      <article class="step">
-        <span class="num">03</span>
-        <div class="icon">🖼️</div>
-        <h3>مراجعة التنسيق</h3>
-        <p>وملاحقة الأخطاء</p>
-      </article>
-      <article class="step">
-        <span class="num">04</span>
-        <div class="icon">📤</div>
-        <h3>حفظ وإرسال</h3>
-        <p>ثم ابدأ من جديد</p>
-      </article>
+<!-- PROBLEM -->
+<section class="section problemSection center">
+  <div class="wrap wrap-md">
+    <span class="kicker">العمل لا ينتهي عند إنشاء المستند</span>
+    <h2 class="title">مئات التعديلات<br><em>نسخ أكثر. ومراجعة في كل مرة</em></h2>
+    <p class="problemLead">نسخ القالب، وتغيير البيانات، ومراجعة التفاصيل… ثم تكرار الخطوات للملف التالي</p>
+    <div class="problemGrid">
+      <div class="problemCard">
+        <div class="problemIcon">📑</div>
+        <h3>نسخ تتراكم</h3>
+        <p>نسخة لكل عميل أو موظف أو مشروع</p>
+      </div>
+      <div class="problemCard">
+        <div class="problemIcon">✏️</div>
+        <h3>تعديلات تتكرر</h3>
+        <p>أسماء وأسعار وتواريخ وشعارات تُغيّر يدويًا</p>
+      </div>
+      <div class="problemCard">
+        <div class="problemIcon">🔍</div>
+        <h3>مراجعات لا تنتهي</h3>
+        <p>كل نسخة تحتاج مراجعة للتأكد من عدم بقاء بيانات قديمة</p>
+      </div>
+      <div class="problemCard">
+        <div class="problemIcon">⚠️</div>
+        <h3>أخطاء وتأخير</h3>
+        <p>اسم خاطئ أو سعر قديم يكفي لإعادة العمل وتأخير التسليم</p>
+      </div>
     </div>
-    <div class="repeat">وتكرر هذا... <b>20</b> مرة <b>50</b> مرة <b>100</b> مرة. <em>كل أسبوع</em></div>
+    <p class="problemClose">كلما زادت الملفات، تضاعف العمل والأخطاء</p>
   </div>
 </section>
 
-<!-- MAGIC (dark) -->
-<section id="how" class="section magic">
-  <div class="wrap magicGrid">
-    <div class="magicCopy">
-      <span class="kicker">مع FORMA</span>
-      <h2 class="title">اكتبها<br/><em>كما تفكّر بها</em></h2>
-      <p>لا إعدادات معقدة. اختر قالبك وبياناتك، ثم أخبر FORMA بما تحتاجه</p>
-      <div class="quote">💬 أنشئ عرض سعر لجميع<br/>العملاء الجدد</div>
+<!-- SOLUTION -->
+<section id="steps" class="section solutionSection">
+  <div class="wrap splitGrid">
+    <div class="splitCopy">
+      <span class="kicker">كيف تعمل FORMA؟</span>
+      <h2 class="title">اطلب مستنداتك<br><em>واستلمها كلها جاهزة</em></h2>
+      <p class="splitLead">اكتب ما تحتاجه، أرفق بياناتك، واترك لـ FORMA تجهيز المستند بقالب شركتك</p>
+      <p class="splitBold">طلب بسيط. مستند جاهز للمراجعة.</p>
     </div>
-    <div class="gen">
-      <div class="genhead"><b>⚡ يتم الإنشاء الآن</b><span>5 مستندات</span></div>
-      <div class="progress"></div>
-      <div class="files">
-        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — شركة ألف</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
-        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — شركة باء</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
-        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — أحمد</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
-        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — شركة جيم</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
-        <div class="file"><span class="fileIcon">▤</span><div><strong>عرض سعر — شركة دال</strong><small>عرض سعر</small></div><span class="done">✓</span></div>
+    <div class="demoCard" id="single-demo">
+      <div class="demoBubble" id="single-demo-request">جهّز عرض سعر لشركة ألف وفق الاتفاق الجديد</div>
+      <div class="progress"><div class="progressBar"></div></div>
+      <div class="demoSingleResult">
+        <div class="demoSingleFile">
+          <span class="fileIcon">▤</span>
+          <span class="demoSingleFileName" id="single-demo-doc">عرض السعر</span>
+          <span class="done">✓</span>
+        </div>
+        <p class="demoSingleNote"><span id="single-demo-doc2">عرض السعر</span> جاهز للمراجعة</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SMART -->
-<section class="section smart center">
-  <div class="wrap">
-    <span class="kicker">كيف يعمل؟</span>
-    <h2 class="title">ارفعها مرة واحدة. <em>اطلبها للأبد</em></h2>
-    <p class="lead-narrow">ثلاث خطوات تفصل فريقك عن آخر نسخة يدوية في تاريخه</p>
-    <div class="cards">
-      <article class="card">
-        <div class="cardTop"><div class="icon">📄</div><small>01</small></div>
-        <h3>قوالبك، كما هي</h3>
-        <p>ارفع عقودك وعروضك الحالية بنفس هويتها وتنسيقها. لا تعيد بناء أي شيء</p>
-        <div class="tags"><span>قوالب: Word</span><span>قوالب: PowerPoint</span><span>بيانات: Excel</span><span>بيانات: CSV</span><span>صور: Drive</span></div>
-      </article>
-      <article class="card">
-        <div class="cardTop"><div class="icon">🗂️</div><small>02</small></div>
-        <h3>بياناتك وملفاتك، من مصادرها</h3>
-        <p>ارفع Excel أو اربط مصدر بياناتك، وتستخدم FORMA كل صف لإنشاء النسخة الصحيحة</p>
-        <div class="tags"><span>جدول بيانات</span><span>CSV</span><span>Excel</span><span>Drive</span></div>
-      </article>
-      <article class="card">
-        <div class="cardTop"><div class="icon">✦</div><small>03</small></div>
-        <h3>اطلب أو عدّل. نفّذ بالعشرات</h3>
-        <p>«أنشئ عقود الموظفين الجدد» — وخلال ثوانٍ تستلم ملفات مكتملة جاهزة للإرسال</p>
-        <div class="tags"><span>فوري</span><span>دقيق</span><span>آمن</span></div>
-      </article>
+<!-- SINGLE CLIENT JOURNEY -->
+<section class="section clientSection">
+  <div class="wrap splitGrid">
+    <div class="splitCopy">
+      <span class="kicker">عميل واحد</span>
+      <h2 class="title">من الاتفاق<br><em>إلى كل ملفات العميل</em></h2>
+      <p class="splitLead">أخبر FORMA بما تم الاتفاق عليه، وتستخدم المعلومات نفسها لإنشاء الملفات المطلوبة دون إعادة إدخالها في كل مستند</p>
+      <p class="splitBold">معلومات واحدة. كل مستندات العميل</p>
+    </div>
+    <div class="clientCard" id="client-demo">
+      <div class="demoBubble demoBubbleWide" id="client-demo-brief">اتفقنا مع شركة ألف على الباقة الاحترافية بقيمة 9,500 ريال، وتبدأ الخدمة في 1 أغسطس</div>
+      <div class="progress progressLight"><div class="progressBar"></div></div>
+      <div class="clientTags" id="client-demo-tags"></div>
+      <div class="clientArrow">↓</div>
+      <div class="clientFiles" id="client-demo-files"></div>
     </div>
   </div>
+</section>
+
+<!-- TEMPLATE AT SCALE -->
+<section class="section scaleSection">
+  <div class="wrap splitGrid">
+    <div class="splitCopy">
+      <span class="kicker">عندما يتكرر القالب</span>
+      <h2 class="title">قالب واحد<br><em>مئات النسخ المخصصة</em></h2>
+      <p class="splitLead">بدل نسخ القالب وتعديل كل نسخة يدويًا، أرفق قائمة الأسماء والمعلومات واطلب من FORMA إنشاء الجميع</p>
+      <p class="splitBold">بدل 100 عملية نسخ وتعديل، طلب واحد</p>
+    </div>
+    <div class="demoCard" id="scale-demo">
+      <div class="scaleChips" id="scale-demo-chips"></div>
+      <div class="demoBubble" id="scale-demo-request">أنشئ عقدًا لكل موظف في هذا الجدول</div>
+      <div class="progress"><div class="progressBar"></div></div>
+      <p class="scaleProgressLabel" id="scale-demo-label">جاري إنشاء 100 عقد…</p>
+      <div class="scaleFiles" id="scale-demo-files"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY BANNER -->
+<section class="summaryBanner">
+  <h2>مهما كان عدد الملفات،<br><em>لا تكرر العمل</em></h2>
 </section>
 
 <!-- TEAMS -->
-<section id="teams" class="section teams">
+<section id="teams" class="section teamsSection center">
   <div class="wrap">
-    <div class="headrow">
-      <div>
-        <span class="kicker">منصة واحدة. لكل الأقسام.</span>
-        <h2 class="title">كل فريق يكرر مستنداته<br/>FORMA تنهي التكرار</h2>
-      </div>
-      <p>تختلف الملفات، لكن العمل المتكرر واحد: نسخ القالب، تغيير البيانات<br/>ثم المراجعة. FORMA تتولى ذلك للجميع</p>
-    </div>
+    <span class="kicker">منصة واحدة. لكل الأقسام</span>
+    <h2 class="title">كل فريق يكرر مستنداته<br>FORMA تنهي التكرار</h2>
     <div class="departments">
       <article class="dept"><div class="icon">👥</div><div><h3>الموارد البشرية</h3><p>عقود · خطابات · شهادات</p></div></article>
       <article class="dept"><div class="icon">📈</div><div><h3>المبيعات</h3><p>عروض أسعار · مقترحات · عقود</p></div></article>
@@ -190,39 +187,36 @@
   </div>
 </section>
 
-<!-- CHAT (dark) -->
-<section id="product" class="section chat">
-  <div class="wrap chatGrid">
-    <div class="chatCopy">
-      <span class="kicker">بساطة غير معتادة</span>
-      <h2 class="title">مجرد<br/><em>محادثة</em></h2>
-      <p>قل لـFORMA ما الذي تريد إنشاءه، وهي تساعدك على مطابقة القالب بالبيانات والصور قبل التنفيذ</p>
-    </div>
-    <div class="demo">
-      <div class="demoTop"><b>✦ مساعد FORMA</b><span class="online">● متصل</span></div>
-      <div class="conversation">
-        <div class="bubble">استخدم قالب عرض السعر، وملف العملاء، وشعارات مجلد الحملة</div>
-        <div class="answer">
-          <span class="answerIcon">✦</span>
-          <div class="answerBody">
-            <div class="answerCard">
-              <div><span class="done">✓</span>تمت مطابقة 48 عميلًا</div>
-              <div><span class="done">✓</span>تم العثور على 46 شعارًا</div>
-              <div class="warn"><span class="warnDot">!</span>شعاران يحتاجان مراجعة</div>
-              <button type="button" class="answerBtn">إنشاء 48 عرض سعر</button>
-            </div>
-          </div>
+<!-- TESTIMONIALS -->
+<section class="section testimonialsSection">
+  <div class="wrap wrap-md">
+    <h2 class="title center">لماذا انضموا <em>للوصول المبكر؟</em></h2>
+    <div class="testimonialGrid">
+      <article class="testimonialCard">
+        <span class="quoteMark">”</span>
+        <p>نقضي أكثر من 20 ساعة شهريًا في تعديل العقود نفسها يدويًا</p>
+        <div class="testimonialAuthor">
+          <span class="avatarInitial">س</span>
+          <div><b>سارة القحطاني</b><small>مديرة موارد بشرية</small></div>
         </div>
-      </div>
+      </article>
+      <article class="testimonialCard">
+        <span class="quoteMark">”</span>
+        <p>نحتاج أداة تحافظ على تنسيق قوالبنا دون تعديلات متكررة</p>
+        <div class="testimonialAuthor">
+          <span class="avatarInitial">خ</span>
+          <div><b>خالد منصور</b><small>مدير مبيعات</small></div>
+        </div>
+      </article>
+      <article class="testimonialCard">
+        <span class="quoteMark">”</span>
+        <p>لكل حملة نكرر قوالب المؤثرين، ثم نعدّل بيانات كل مؤثر يدويًا</p>
+        <div class="testimonialAuthor">
+          <span class="avatarInitial">ن</span>
+          <div><b>نورة الحربي</b><small>مؤسِّسة وكالة تسويق</small></div>
+        </div>
+      </article>
     </div>
-  </div>
-</section>
-
-<!-- STATEMENT -->
-<section class="statement">
-  <div class="wrap">
-    <h2>فريقك لم يُوظّف<br/>لنسخ ولصق البيانات</h2>
-    <p>بل ليبني الشركة</p>
   </div>
 </section>
 
@@ -232,11 +226,11 @@
     <h2 class="title center">أسئلة <em>شائعة</em></h2>
     <div class="faqList">
       <div class="faqItem">
-        <button class="faqQ">ما الذي تفعله FORMA تحديدًا؟<span class="faqIcon">+</span></button>
+        <button class="faqQ">ماذا تفعل FORMA بالضبط؟<span class="faqIcon">+</span></button>
         <p class="faqA">ترفع قوالبك وبياناتك مرة واحدة، وتطلب من FORMA إنشاء أو تحديث مستنداتك بمحادثة بسيطة.</p>
       </div>
       <div class="faqItem">
-        <button class="faqQ">ما تكلفة الاشتراك؟<span class="faqIcon">+</span></button>
+        <button class="faqQ">ما هي التكلفة؟<span class="faqIcon">+</span></button>
         <p class="faqA">الأسعار تُعلن عند الإطلاق. المسجلون في قائمة الانتظار يحصلون على عروض تسعير حصرية.</p>
       </div>
       <div class="faqItem">
@@ -244,15 +238,15 @@
         <p class="faqA">نعم، FORMA مبنية للعمل بالعربية والإنجليزية معًا، وتحافظ على تنسيق القالب الأصلي.</p>
       </div>
       <div class="faqItem">
-        <button class="faqQ">من أين تستمد FORMA البيانات؟<span class="faqIcon">+</span></button>
-        <p class="faqA">من الملفات والقوالب التي ترفعها أنت، وبيانات الموظفين والعملاء التي تحفظها داخل FORMA.</p>
+        <button class="faqQ">من أين تأتي البيانات؟<span class="faqIcon">+</span></button>
+        <p class="faqA">من الملفات والقوالب التي ترفعها، وبيانات الموظفين والعملاء التي تحفظها داخل FORMA</p>
       </div>
       <div class="faqItem">
-        <button class="faqQ">كم يستغرق تحديث المستندات؟<span class="faqIcon">+</span></button>
+        <button class="faqQ">كم يحتاج التحديث من وقت؟<span class="faqIcon">+</span></button>
         <p class="faqA">ثوانٍ لكل مستند، وحتى عشرات المستندات دفعة واحدة في نفس الوقت.</p>
       </div>
       <div class="faqItem">
-        <button class="faqQ">هل تُستخدم بيانات شركتنا لتدريب النظام؟<span class="faqIcon">+</span></button>
+        <button class="faqQ">هل تدرّبون النظام على بيانات شركتنا؟<span class="faqIcon">+</span></button>
         <p class="faqA">لا. بياناتك تُستخدم فقط لإنشاء مستنداتك، ولا تُستخدم لتدريب أي نموذج آخر.</p>
       </div>
     </div>
@@ -260,76 +254,99 @@
 </section>
 
 <!-- FINAL CTA -->
-<section id="join" class="final">
+<section id="join" class="joinSection">
   <div class="wrap">
-    <span class="kicker light">ابدأ من هنا</span>
-    <h2>العمل المتكرر<br/>ينتهي هنا.</h2>
+    <div class="joinCard">
+      <span class="kicker">ابدأ من هنا</span>
+      <h2 class="joinTitle">ابدأ رحلتك مع FORMA اليوم</h2>
 
-    <div class="ctaSuccess" id="cta-success" hidden>
-      <span class="done">✓</span>
-      تم التسجيل! سنراسلك عند فتح الوصول المبكر.
+      <div class="ctaSuccess" id="cta-success" hidden>
+        <span class="done">✓</span>
+        تم التسجيل! سنراسلك عند فتح الوصول المبكر
+      </div>
+
+      <button type="button" class="button js-open-modal" id="join-open-modal">احجز وصولك المبكر ←</button>
+
+      <small>مقاعد الوصول المبكر محدودة — المسجلون الأوائل يحصلون على تسعير المؤسسين</small>
     </div>
-
-    <button type="button" class="joinTrigger" id="open-waitlist-modal">احجز وصولك المبكر ←</button>
-
-    <small>⚡ مقاعد الوصول المبكر محدودة — المسجلون الأوائل يحصلون على تسعير المؤسسين.</small>
   </div>
 </section>
-
-<!-- WAITLIST MODAL -->
-<div class="modalOverlay" id="waitlist-modal" hidden>
-  <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modalHead">
-      <button type="button" class="modalClose" id="modal-close" aria-label="إغلاق">✕</button>
-      <div>
-        <h3 id="modal-title">احجز وصولك المبكر</h3>
-      </div>
-    </div>
-    <p class="modalSub">٣ أسئلة سريعة تساعدنا نجهّز حسابك بالشكل الصحيح.</p>
-    <form id="modal-form">
-      <div class="field">
-        <label>١ · ما أكثر مستند تنشئه أو تعدّله باستمرار؟</label>
-        <input type="text" id="q-doc" placeholder="عقود، عروض أسعار، تقارير، خطابات...">
-      </div>
-      <div class="field">
-        <label>٢ · كم مرة تتعامل معه شهريًا؟</label>
-        <div class="pillGroup" data-field="monthly_volume">
-          <button type="button" class="pill">1–10</button>
-          <button type="button" class="pill">11–50</button>
-          <button type="button" class="pill">51–100</button>
-          <button type="button" class="pill">أكثر من 100</button>
-        </div>
-      </div>
-      <div class="field">
-        <label>٣ · ما أكبر مشكلة تواجهك عند إنشاء أو تعديل المستندات؟</label>
-        <div class="pillGroup" data-field="main_problem">
-          <button type="button" class="pill">نسخ ولصق يدوي</button>
-          <button type="button" class="pill">تنسيق يضيع بين البرامج</button>
-          <button type="button" class="pill">تكرار نفس المستند</button>
-          <button type="button" class="pill">أخطاء بالبيانات</button>
-          <button type="button" class="pill" data-other="true">أخرى</button>
-        </div>
-        <textarea id="q-pain-other" rows="3" placeholder="اكتب بحرية… ما الذي يستهلك وقتك أو يزعجك أكثر؟" hidden></textarea>
-      </div>
-      <div class="field">
-        <label>بريدك الإلكتروني</label>
-        <input type="email" id="q-email" dir="ltr" placeholder="you@company.com" required>
-      </div>
-      <button type="submit" class="modalSubmit">تأكيد الحجز ←</button>
-      <p class="modalHint">أو اضغط Enter للإرسال</p>
-    </form>
-  </div>
-</div>
 
 <footer>
   <div class="wrap">
     <a href="#" class="logo">
-      <img src="assets/forma-logo-light.png" alt="Forma" class="logo-img">
+      <img src="assets/forma-logo-dark.png" alt="Forma" class="logo-img">
     </a>
     <small>نحو عملٍ أقل تكرارًا</small>
     <small>© 2026 FORMA</small>
   </div>
 </footer>
+
+<!-- WAITLIST MODAL -->
+<div class="modalOverlay" id="waitlist-modal" hidden>
+  <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modalHead">
+      <button type="button" class="modalBack" id="modal-back" hidden aria-label="رجوع">→</button>
+      <div class="modalHeadTitle">
+        <h3 id="modal-title">كم ساعة تقضي شهريًا في إنشاء المستندات وتعديلها؟</h3>
+      </div>
+      <button type="button" class="modalClose" id="modal-close" aria-label="إغلاق">✕</button>
+    </div>
+    <p class="modalSub" id="modal-subtitle">إجابتك تساعدنا على تجهيز FORMA لحالتك بالضبط.</p>
+
+    <div class="stepDots">
+      <span class="stepDot" data-step="0"></span>
+      <span class="stepDot" data-step="1"></span>
+      <span class="stepDot" data-step="2"></span>
+      <span class="stepDot" data-step="3"></span>
+    </div>
+
+    <form id="modal-form">
+      <!-- STEP 0 -->
+      <div class="modalStep" data-step="0">
+        <div class="optionList" data-field="hours_per_month">
+          <button type="button" class="optionBtn">أقل من ساعة</button>
+          <button type="button" class="optionBtn">1–5 ساعات</button>
+          <button type="button" class="optionBtn">6–10 ساعات</button>
+          <button type="button" class="optionBtn">أكثر من 10 ساعات</button>
+        </div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="modalStep" data-step="1" hidden>
+        <div class="optionList" data-field="documents_per_month">
+          <button type="button" class="optionBtn">1–10</button>
+          <button type="button" class="optionBtn">11–50</button>
+          <button type="button" class="optionBtn">51–100</button>
+          <button type="button" class="optionBtn">أكثر من 100</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="modalStep" data-step="2" hidden>
+        <div class="checkList" data-field="pain_points">
+          <button type="button" class="checkBtn"><span class="checkBox"></span>النسخ واللصق يدويًا</button>
+          <button type="button" class="checkBtn"><span class="checkBox"></span>إدخال البيانات أكثر من مرة</button>
+          <button type="button" class="checkBtn"><span class="checkBox"></span>الأخطاء والمراجعات المتكررة</button>
+          <button type="button" class="checkBtn"><span class="checkBox"></span>البحث عن القالب أو النسخة الصحيحة</button>
+          <button type="button" class="checkBtn"><span class="checkBox"></span>التنسيق بين البرامج</button>
+          <button type="button" class="checkBtn"><span class="checkBox"></span>أخرى</button>
+        </div>
+        <button type="button" class="modalNext" id="modal-next" disabled>التالي ←</button>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="modalStep" data-step="3" hidden>
+        <div class="field">
+          <label>بريدك الإلكتروني</label>
+          <input type="email" id="q-email" dir="ltr" placeholder="you@company.com" required>
+        </div>
+        <button type="submit" class="modalSubmit">تأكيد الحجز ←</button>
+        <p class="modalHint">أو اضغط Enter للإرسال</p>
+      </div>
+    </form>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>
