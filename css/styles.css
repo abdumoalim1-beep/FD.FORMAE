@@ -486,13 +486,15 @@ footer small { color: var(--muted); font-size: 12px; }
   background: var(--paper);
   border: none;
   border-radius: 8px;
-  width: 30px;
   height: 30px;
   font-size: 14px;
+  font-family: inherit;
   color: var(--muted);
   cursor: pointer;
   flex-shrink: 0;
 }
+.modalBack { padding: 0 12px; }
+.modalClose { width: 30px; padding: 0; }
 .modalSub { font-size: 13px; color: var(--muted); margin: 0 0 22px; line-height: 1.7; }
 .stepDots { display: flex; gap: 6px; margin-bottom: 24px; }
 .stepDot { height: 4px; flex: 1; border-radius: 3px; background: var(--line); }
