@@ -231,6 +231,7 @@ footer .logo-img { height: 16px; }
   height: 36px;
   border-radius: 10px;
   background: #fff;
+  color: var(--p);
   display: grid;
   place-items: center;
   font-size: 16px;
@@ -353,6 +354,7 @@ footer .logo-img { height: 16px; }
   height: 44px;
   border-radius: 14px;
   background: #fff;
+  color: var(--p);
   display: grid;
   place-items: center;
   font-size: 19px;
