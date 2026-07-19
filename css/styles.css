@@ -1,5 +1,5 @@
 :root {
-  --p: #7140e8;
+  --p: #421ce6;
   --p2: #9d78f5;
   --ink: #18151f;
   --muted: #716c78;
@@ -124,7 +124,7 @@ footer .logo-img { height: 16px; }
   font-size: 14.5px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 20px 40px -16px #7140e870;
+  box-shadow: 0 20px 40px -16px #421ce670;
   transition: transform 0.2s ease;
 }
 .button:hover { transform: translateY(-2px); }
@@ -437,7 +437,7 @@ footer .logo-img { height: 16px; }
   border-radius: 14px;
   padding: 18px 34px;
   font-size: 15px;
-  box-shadow: 0 20px 50px -15px #7140e870;
+  box-shadow: 0 20px 50px -15px #421ce670;
 }
 .joinCard > small { display: block; margin-top: 18px; color: var(--muted); font-size: 12px; }
 
